@@ -48,3 +48,45 @@ The Healthcare Backend API is a Django-based web application designed for managi
 ```bash
 git clone <repository-url>
 cd healthcare-backend
+```
+
+### Step 2: Install Dependencies
+```bash
+python -m venv venv
+source venv/bin/activate 
+
+pip install -r requirements.txt
+```
+
+### Step 3: Configure Environment Variables
+## Create a .env file in your project’s root directory and add the following environment variables (replace placeholders with your actual credentials):
+```bash
+SECRET_KEY=your_secret_key_here
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1,localhost
+
+DB_NAME=supabase_db
+DB_USER=postgres
+DB_PASSWORD=your_password
+DB_HOST=db.yoursupabasehost.supabase.co
+DB_PORT=5432
+
+```
+
+### Step 4: Database Migration
+## Set up your database schema with Django migrations:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+
+```
+
+### Step 5: Run the Development Server
+## Start the Django development server:
+```bash
+python manage.py runserver
+
+```
+
+
+
